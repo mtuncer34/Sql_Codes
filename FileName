@@ -1,1 +1,4 @@
-efbwefbwkeıo
+select * from (Select top 5 * from Products order by  UnitPrice desc) a
+union
+select * from (Select top 5 * from Products order by  UnitPrice asc) b
+Order by UnitPrice
