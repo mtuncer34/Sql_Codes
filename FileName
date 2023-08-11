@@ -2,3 +2,8 @@ select * from (Select top 5 * from Products order by  UnitPrice desc) a
 union
 select * from (Select top 5 * from Products order by  UnitPrice asc) b
 Order by UnitPrice
+
+
+
+select a.EmployeeID, a.LastName, a.FirstName, a.ReportsTo, b.Amir from Employees a
+inner join (select EmployeeID, LastName+ ' ' + FirstName Amir from Employees) b on b.EmployeeID = a.ReportsTo
