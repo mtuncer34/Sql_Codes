@@ -7,3 +7,6 @@ Order by UnitPrice
 
 select a.EmployeeID, a.LastName, a.FirstName, a.ReportsTo, b.Amir from Employees a
 inner join (select EmployeeID, LastName+ ' ' + FirstName Amir from Employees) b on b.EmployeeID = a.ReportsTo
+
+select ProductName, UnitsInStock,
+(case when UnitsInStock < 10 then 'StokYok' else 'Stok_Var' end) as Stok_Durumu from Products
